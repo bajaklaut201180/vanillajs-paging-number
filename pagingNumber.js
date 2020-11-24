@@ -20,7 +20,7 @@ const pagingNumber = (totalPage, currentPage, nextPage, previousPage) => {
   }
 
   if(result['lastNumber'] > totalPage) {
-    result['startNumber'] = totalPage - numberOfPaging + 1;
+    result['startNumber'] = totalPage - numberOfPaging + 1 <= 0 ? 1: totalPage - numberOfPaging + 1;
     result['lastNumber'] = totalPage;
   }
 
